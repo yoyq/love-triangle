@@ -7,6 +7,8 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
     let checkMas = [];
 
     for (let i = 0; i < preferences.length; i++) {
+        if (preferences[i] === undefined) { continue; }
+
         if (!checkMas.length) {
             checkMas.push(i);
         }
